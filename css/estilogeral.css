@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+body {
+    background-image: url(../imagens/newcapahome.jpeg);
+    background-size: cover;
+}
+
+.navegacao {
+    background-color: black;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0 6%;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+.logo img {
+    width: 50%;
+    padding: 1rem 0;
+}
+
+/* .navegacao nav{
+    background-color: red;
+    justify-content: space-between;
+    text-align: center;
+    padding: .6rem;
+}
+.navegacao nav a{
+    color: black;
+    margin: 0 3%;
+} */
+.container-index {
+    padding: 2rem;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 3% auto;
+    margin-bottom: 0%;
+    
+}
+
+.container-index img {
+    margin-left: 10%;
+    width: 80%;
+}
+
+.container-index h2 {
+       font-size: 40px;
+       margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    /* -webkit-text-stroke: 2px #070606; */
+}
+
+.container-index h3 {
+    color: black;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.botoes {
+    margin-top: .6rem;
+    display: grid;
+    width: 100%;
+}
+
+.botoes p {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+}
+
+.btn {
+    text-align: center;
+    background-color: red;
+    width: 100%;
+    padding: .6rem 0;
+    border-radius: .6rem;
+    opacity: .8;
+    transition: .6s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: black;
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    background-color: black;
+    color: #fff;
+    
+}
+@media screen and (max-width: 900px){
+    .container-index{
+        display: block;
+    }
+    .container-index img{
+        margin-top: 2rem;
+    }
+   
+}
