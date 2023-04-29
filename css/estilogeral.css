@@ -47,7 +47,7 @@ body {
     grid-template-columns: 40% 60%;
     margin: 3% auto;
     margin-bottom: 0%;
-    max-height: 100vh;
+    
 }
 
 .container-index img {
@@ -101,6 +101,7 @@ footer {
     padding: 1.2rem;
     background-color: black;
     color: #fff;
+    
 }
 @media screen and (max-width: 900px){
     .container-index{
@@ -109,4 +110,5 @@ footer {
     .container-index img{
         margin-top: 2rem;
     }
+   
 }
