@@ -84,7 +84,7 @@ body {
     margin-left: 4%;
     margin-bottom: .3rem;
     font-size: 1..2rem;
- 
+
 
 }
 
@@ -106,14 +106,17 @@ body {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-     
+
 }
-.info-filme i{
+
+.info-filme i {
     font-size: 1.2rem;
 }
-.info-filme div{
+
+.info-filme div {
     margin-right: .8%;
 }
+
 .botoes {
     margin-top: .6rem;
     display: grid;
@@ -176,12 +179,31 @@ footer {
         grid-template-columns: repeat(auto-fill, 190px);
 
     }
-        .home-area {
-            display: block;
-        }
 
-        .home-area img {
-            margin-top: 2rem;
-        }
+    .home-area {
+        display: block;
+    }
+
+    .home-area img {
+        margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .container-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
 
     }
+
+    .card-filme img {
+        height: 100%;
+        border-bottom-right-radius: .4rem;
+        border-bottom-left-radius: .4rem;
+    }
+
+    .info-filme {
+        display: none;
+    }
+}
