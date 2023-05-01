@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     color: aliceblue;
-    box-sizing: border-box !important;
 }
 
 body {
-    background-color: #ece9e9;
+    background-image: url(../imagens/newcapahome.jpeg);
     background-size: cover;
 }
 
@@ -18,6 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     margin: 0 6%;
 }
 
@@ -35,85 +35,49 @@ body {
     padding: 1rem 0;
 }
 
-.navegacao nav {
+/* .navegacao nav{
     background-color: red;
     justify-content: space-between;
     text-align: center;
     padding: .6rem;
 }
-
-.navegacao nav a {
+.navegacao nav a{
     color: black;
     margin: 0 3%;
-}
-
+} */
 .container {
-    padding: 1rem;
-    width: 86%;
-    margin: 2% auto;
+    padding: 2rem;
+    width: 85%;
+    margin: 3% auto;
 
 }
 
-.container-card {
+.home-area {
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, 210px);
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 40% 60%;
+
 
 }
 
-.card-filme {
-    background-color: #990000;
-    max-width: 200px;
-    box-sizing: border-box;
-    margin: 1rem;
-    opacity: .9;
-    font-size: 1rem;
-    border-radius: .4rem;
-
+.home-area img {
+    margin-left: 10%;
+    width: 80%;
 }
 
-.card-filme:hover {
-    opacity: 1;
-    box-shadow: .3em 3px 6px #235661;
-
+.home-area h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    /* -webkit-text-stroke: 2px #070606; */
 }
 
-.card-filme h3 {
-    color: white;
-    margin-left: 4%;
-    margin-bottom: .3rem;
-    font-size: 1..2rem;
- 
-
+.home-area h3 {
+    color: black;
+    font-size: 1.5rem;
+    text-align: justify;
 }
 
-.card-filme a {
-    text-decoration: none;
-    color: #161718;
-}
-
-.card-filme img {
-    width: 100%;
-    max-height: 230px;
-    border-top-right-radius: .4rem;
-    border-top-left-radius: .4rem;
-
-}
-
-.card-filme,
-.info-filme {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-     
-}
-.info-filme i{
-    font-size: 1.2rem;
-}
-.info-filme div{
-    margin-right: .8%;
-}
 .botoes {
     margin-top: .6rem;
     display: grid;
@@ -171,17 +135,12 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-    .container-card {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 190px);
-
+    .home-area {
+        display: block;
     }
-        .home-area {
-            display: block;
-        }
 
-        .home-area img {
-            margin-top: 2rem;
-        }
-
+    .home-area img {
+        margin-top: 2rem;
     }
+
+}
