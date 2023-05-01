@@ -7,7 +7,7 @@
 
 body {
     background-color: #ece9e9;
- 
+
 }
 
 .navegacao {
@@ -58,7 +58,7 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 1.2rem;
 
-  
+
 
 }
 
@@ -93,9 +93,9 @@ body {
 
 
 .card-filme:hover img {
-    padding: 8%;
+    padding: 5%;
     box-sizing: border-box;
-    border-radius: 1.4rem !important;
+    border-radius: 1rem !important;
     transition: .6s;
 
 }
@@ -124,8 +124,10 @@ body {
 
 }
 
-.info-filme i {
-    font-size: 1.2rem;
+.info-filme i,
+.info-filme h3 {
+    font-size: 1.5rem;
+
 }
 
 .info-filme div {
@@ -167,13 +169,14 @@ body {
 [data-tooltip]:after {
     display: none;
     position: absolute;
-    padding: 5px;
+    padding:5px;
+    bottom: 2rem;
     border-radius: 3px;
     content: attr(data-tooltip);
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: rgb(12, 12, 12);
-    color: red;
+    color: rgb(250, 244, 244);
 }
 
 [data-tooltip]:hover:after {
@@ -186,6 +189,10 @@ footer {
     background-color: black;
     color: #fff;
 
+}
+
+.info-mobile {
+    display: none;
 }
 
 @media screen and (max-width: 1025px) {
@@ -206,7 +213,7 @@ footer {
 
 }
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 780px) {
     .container-card {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -221,17 +228,30 @@ footer {
 
     .container {
         margin: 0 auto;
-       
+
+    }
+
+    [data-tooltip]::after {
+        left: 0%;
+        top: 40px;
+      padding: .6rem;
+
+    }
+
+    .card-filme:hover img {
+        padding: 0;
+        border-radius: 0 !important;
     }
 
     .container-card {
         margin-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-       
+        grid-template-columns: repeat(2, 1fr);
+
 
     }
-       .card-filme {
+
+    .card-filme {
         margin: 0;
         width: 180px;
         height: 200px;
@@ -244,15 +264,28 @@ footer {
         border-bottom-left-radius: .4rem;
     }
 
-    .info-filme {
+    .info-filme h3 {
         display: none;
+    }
+
+    .info-filme {
+        display: block;
+        margin-top: -3.4rem;
+        text-align: end;
+        padding: .4rem;
+
+    }
+
+    .info-filme i {
+        font-size: 2rem;
+        color: white;
     }
 }
 
 @media screen and (max-width: 380px) {
 
     .card-filme {
-       width: 90%;
+        width: 90%;
         height: 130px;
     }
 
