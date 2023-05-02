@@ -21,6 +21,21 @@ body {
     margin: 0 5%;
 }
 
+.logo nav {
+    background-color: blue;
+    width: 800px;
+
+}
+
+.logo nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo ul li {
+    justify-content: space-between;
+}
+
 .logo i {
     font-size: 2rem;
     transition: .5s;
@@ -33,18 +48,11 @@ body {
 .logo img {
     width: 50%;
     padding: 1rem 0;
+    margin-left: 8%;
 }
 
 .navegacao nav {
-    background-color: red;
-    justify-content: space-between;
-    text-align: center;
-    padding: .6rem;
-}
-
-.navegacao nav a {
-    color: black;
-    margin: 0 3%;
+    display: flex;
 }
 
 .container {
@@ -53,14 +61,52 @@ body {
 
 }
 
+span#burger {
+    display: inline;
+    top: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: absolute;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+span#burger:hover {
+    color: rgb(238, 238, 238);
+}
+
+menu {
+    display: none;
+}
+
+menu>ul {
+    list-style-type: none;
+    text-align:center;
+    background-color: #990000;
+}
+
+menu>ul>li>a { 
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    
+}
+
+menu>ul>li>a:hover {
+    background-color: rgb(192, 11, 11);
+}
+
 .container-card {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1.2rem;
 
-
-
 }
+
 
 .card-filme {
     background-color: #580202;
@@ -74,12 +120,12 @@ body {
     overflow: hidden;
 
 }
-
 .card-filme:hover {
     opacity: 1;
     box-shadow: .3em 3px 6px #235661;
     background-color: #3d0202;
     transition: .6s;
+
 
 }
 
@@ -88,14 +134,14 @@ body {
     margin-left: 4%;
     margin-bottom: .3rem;
     font-size: 1.2rem;
-    z-index: 10;
+    z-index: 1;
 
 
 }
 
 
 .card-filme:hover img {
- object-fit: cover;
+    object-fit: cover;
     box-sizing: border-box;
     border-radius: 0;
     padding: 0;
@@ -116,24 +162,26 @@ body {
 .card-filme img {
     width: 100%;
     height: 88%;
-     border-top-right-radius: .4rem;
-    border-top-left-radius: .4rem; 
+    border-top-right-radius: .4rem;
+    border-top-left-radius: .4rem;
     transition: .6s;
-   
+
 
 }
 
- 
+
+
 .info-filme {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    z-index: 1 !important;
 
 }
 
 .info-filme i,
 .info-filme h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
 }
 
@@ -174,10 +222,11 @@ body {
 }
 
 [data-tooltip]:after {
-    display: none;
+ display: none;
     position: absolute;
     padding: 5px;
     bottom: 2rem;
+    right: 0rem;
     border-radius: 3px;
     content: attr(data-tooltip);
     white-space: nowrap;
@@ -202,6 +251,29 @@ footer {
     display: none;
 }
 
+@media screen and (min-width: 800px) {
+    span#burger {
+        display: none;
+    }
+
+    menu {
+        display: inline;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+
+    }
+
+    menu>ul>li>a {
+        text-align: left;
+    }
+
+    main {
+        width: 768px;
+    }
+}
+
 @media screen and (max-width: 1025px) {
     .container-card {
         display: grid;
@@ -219,6 +291,11 @@ footer {
     }
 
 }
+@media screen  and (max-width: 800px){
+    menu>ul>li>a { 
+        border: 1px solid black;
+    }
+}
 
 @media screen and (max-width: 780px) {
     .container-card {
@@ -226,6 +303,8 @@ footer {
         grid-template-columns: repeat(3, 1fr);
 
     }
+    
+    
 }
 
 @media screen and (max-width: 580px) {
@@ -237,7 +316,7 @@ footer {
         margin: 0 auto;
 
     }
-  
+
 
     [data-tooltip]::after {
         left: 5%;
