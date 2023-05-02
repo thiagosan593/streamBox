@@ -63,7 +63,7 @@ body {
 }
 
 .card-filme {
-    background-color: #0a0a0a;
+    background-color: #580202;
     max-width: 230px;
     height: 300px;
     box-sizing: border-box;
@@ -71,13 +71,13 @@ body {
     font-size: 1rem;
     border-radius: .4rem;
     transition: .6s;
-}
 
+}
 
 .card-filme:hover {
     opacity: 1;
     box-shadow: .3em 3px 6px #235661;
-    background-color: #990000;
+    background-color: #3d0202;
     transition: .6s;
 
 }
@@ -93,10 +93,11 @@ body {
 
 
 .card-filme:hover img {
-    padding: 5%;
+
     box-sizing: border-box;
-    border-radius: 1rem !important;
+    border-radius: 0;
     transition: .6s;
+    padding: 0;
 
 }
 
@@ -111,8 +112,10 @@ body {
 .card-filme img {
     width: 100%;
     height: 85%;
-    border-top-right-radius: .4rem;
-    border-top-left-radius: .4rem;
+     border-top-right-radius: .4rem;
+    border-top-left-radius: .4rem; 
+    padding: 10px;
+    transition: .6s;
 
 }
 
@@ -169,7 +172,7 @@ body {
 [data-tooltip]:after {
     display: none;
     position: absolute;
-    padding:5px;
+    padding: 5px;
     bottom: 2rem;
     border-radius: 3px;
     content: attr(data-tooltip);
@@ -234,7 +237,7 @@ footer {
     [data-tooltip]::after {
         left: 0%;
         top: 40px;
-      padding: .6rem;
+        padding: .6rem;
 
     }
 
