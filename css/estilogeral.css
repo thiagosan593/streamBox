@@ -82,18 +82,18 @@ menu {
 
 menu>ul {
     list-style-type: none;
-    text-align:center;
+    text-align: center;
     background-color: #990000;
 }
 
-menu>ul>li>a { 
+menu>ul>li>a {
     width: 100%;
     display: block;
     text-decoration: none;
     padding: 10px;
     color: white;
     text-align: center;
-    
+
 }
 
 menu>ul>li>a:hover {
@@ -120,6 +120,7 @@ menu>ul>li>a:hover {
     overflow: hidden;
 
 }
+
 .card-filme:hover {
     opacity: 1;
     box-shadow: .3em 3px 6px #235661;
@@ -222,7 +223,7 @@ menu>ul>li>a:hover {
 }
 
 [data-tooltip]:after {
- display: none;
+    display: none;
     position: absolute;
     padding: 5px;
     bottom: 2rem;
@@ -291,8 +292,9 @@ footer {
     }
 
 }
-@media screen  and (max-width: 800px){
-    menu>ul>li>a { 
+
+@media screen and (max-width: 800px) {
+    menu>ul>li>a {
         border: 1px solid black;
     }
 }
@@ -303,11 +305,12 @@ footer {
         grid-template-columns: repeat(3, 1fr);
 
     }
-    
-    
+
+
 }
 
 @media screen and (max-width: 580px) {
+    
     header {
         width: 100%;
     }
@@ -316,7 +319,13 @@ footer {
         margin: 0 auto;
 
     }
-
+    span#burger {
+        margin-left: 0;
+        margin-top: .5rem;
+    }
+    .logo img{
+        width: 50%;
+    }
 
     [data-tooltip]::after {
         left: 5%;
@@ -333,15 +342,15 @@ footer {
     .container-card {
         margin-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
 
 
     }
 
     .card-filme {
         margin: 0;
-        width: 180px;
-        height: 200px;
+        width: auto;
+        height: 150px;
         margin-bottom: 1rem;
     }
 
@@ -358,7 +367,7 @@ footer {
 
     .info-filme {
         display: block;
-        margin-top: -3.4rem;
+        margin-top: -3rem;
         text-align: end;
         padding: .4rem;
 
@@ -371,6 +380,16 @@ footer {
 }
 
 @media screen and (max-width: 380px) {
+   
+
+    .container-card {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+
+    }
+
 
     .card-filme {
         width: 90%;
