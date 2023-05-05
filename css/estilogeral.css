@@ -252,6 +252,8 @@ footer {
     display: none;
 }
 
+
+
 @media screen and (min-width: 800px) {
     span#burger {
         display: none;
@@ -310,7 +312,7 @@ footer {
 }
 
 @media screen and (max-width: 580px) {
-    
+
     header {
         width: 100%;
     }
@@ -319,11 +321,13 @@ footer {
         margin: 0 auto;
 
     }
+
     span#burger {
         margin-left: 0;
         margin-top: .5rem;
     }
-    .logo img{
+
+    .logo img {
         width: 50%;
     }
 
@@ -380,7 +384,7 @@ footer {
 }
 
 @media screen and (max-width: 380px) {
-   
+
 
     .container-card {
         margin-top: 2rem;

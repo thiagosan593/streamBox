@@ -12,17 +12,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
-    
+
+    <link rel="stylesheet" href="/css/popup.css">
+    <script src="Js/login.js"></script>
+
 </head>
 
 <body>
     <section class="container-login">
+        
         <div class="login-logo">
             <a href="index.html"> <img src="imagens/logo.png" alt=""></a>
         </div>
         <div class="form-login">
             <h2>LOGIN</h2>
-            <form action="">
+            <form>
                 <label for="email">E-mail:</label>
                 <input type="text" id="email" name="email">
 
@@ -30,12 +34,13 @@
                 <input type="password" id="Senha" name="Senha">
 
                 <p><a href="">Esqueceu sua senha?</a></p>
-                <input type="submit" value="ENTRAR">
+                <input type="submit" onclick="login(); return false" value="ENTRAR">
             </form>
             <p class="not-conter">Não tem conta? <a href="cadastro.html">CADASTRE-SE</a></p>
         </div>
 
     </section>
+   
 </body>
 
 </html>
