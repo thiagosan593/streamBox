@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    color: aliceblue;
     box-sizing: border-box;
 }
 
@@ -39,6 +38,7 @@ body {
 .logo i {
     font-size: 2rem;
     transition: .5s;
+    color: white;
 }
 
 .logo i:hover {
@@ -177,6 +177,7 @@ menu>ul>li>a:hover {
     justify-content: space-between;
     box-sizing: border-box;
     z-index: 1 !important;
+    color: white;
 
 }
 
