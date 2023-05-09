@@ -215,6 +215,9 @@ menu>ul>li>a:hover {
     transition: .6s;
     text-decoration: none;
 }
+.active{
+    background-color: rgba(0, 0, 0, 0.562);
+}
 
 .btn:hover {
     background-color: black;
