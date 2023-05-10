@@ -127,13 +127,17 @@ input:focus {
     margin-top: 10%;
 }
 @media screen and (max-width: 900px) {
-
+   
     body {
         background-size: cover;
+        background-color: blue;
     }
-
+    .login-logo {
+      margin-top: 8%;
+    }
+    
     .container-login {
-        margin-top: 0;
+        margin-top: 0 !important;
         display: block;
         border-radius: 1rem;
     }
@@ -166,7 +170,10 @@ input:focus {
 }
 
 @media screen and (max-width: 600px) {
-
+    .login-logo {
+        margin-top: 0;
+      }
+      
     .login-logo img {
         width: 50%;
     }
