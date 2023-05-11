@@ -73,7 +73,9 @@ span#burger {
     color: white;
     cursor: pointer;
 }
-
+i{
+    cursor: pointer;
+}
 span#burger:hover {
     color: rgb(238, 238, 238);
 }
@@ -188,7 +190,9 @@ menu>ul>li>a:hover {
     font-size: 1.2rem;
 
 }
-
+.concluida{
+ color: green;
+}
 .info-filme div {
     margin-right: .8%;
 }
@@ -257,8 +261,28 @@ footer {
 .info-mobile {
     display: none;
 }
-
-
+.edit-botoes  .btn-atualizar, .edit-botoes .btn-del{
+    margin-top: 1rem;
+    border: none;
+    padding: .4rem;
+    opacity: .8;
+    cursor: pointer;
+    border-radius: .5rem;
+    width: 100%;
+}
+.edit-botoes .btn-atualizar{
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+}
+.edit-botoes .btn-del{
+    background-color: #000;
+    color: white;
+    font-size: 1.2rem;
+}
+.edit-botoes  .btn-atualizar:hover, .edit-botoes .btn-del:hover{
+    opacity: 1;
+}
 
 @media screen and (min-width: 800px) {
     span#burger {

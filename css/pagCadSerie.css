@@ -1,3 +1,9 @@
+.container h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
 .cadastro-serie {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -67,132 +73,151 @@
     margin: 0 1rem;
 
 }
-textarea{
+
+textarea {
     border-radius: .4rem;
     width: 100%;
     padding: .6rem;
 }
-.form-botoes{
+
+.form-botoes {
     display: flex;
     justify-content: space-between;
 }
-button{
+
+button {
     margin-top: 1rem;
-   width: 90%;
-   border-radius: .6rem;
-   border: none;
-   padding: .4rem;
-   opacity: .8;
-   cursor: pointer;
+    width: 90%;
+    border-radius: .6rem;
+    border: none;
+    padding: .4rem;
+    opacity: .8;
+    cursor: pointer;
 }
-button:nth-child(2){
+
+button:nth-child(2) {
     margin-left: 1rem;
 }
-.salvar{
+
+.salvar {
     background-color: red;
     color: white;
     font-size: 1.2rem;
 }
-.cancelar{
+
+.cancelar {
     background-color: #000;
     color: white;
     font-size: 1.2rem;
 }
-button:hover{
+
+button:hover {
     opacity: 1;
 }
 
-.mutiselect{
+.mutiselect {
     width: 100%;
 }
-.selectBox{
+
+.selectBox {
     position: relative;
 }
 
-.selectBox select{
+.selectBox select {
     width: 100%;
     font-weight: bolder;
     padding: .6rem;
     border-radius: .5rem;
     border: 1px solid #000;
 }
-.selectBox select option{
+
+.selectBox select option {
     display: none;
 }
-.overSelect{
+
+.overSelect {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
 }
-#checkboxes{
-    display: none; 
+
+#checkboxes {
+    display: none;
     border: 1px solid #000;
     border-bottom-left-radius: .6rem;
     border-bottom-right-radius: .6rem;
     box-sizing: border-box;
     background-color: white;
 }
-#checkboxes label{
+
+#checkboxes label {
     padding: .3rem;
     width: 100%;
     display: grid;
     grid-template-columns: 90% 10%;
     justify-content: space-between;
-    
+
 }
-#checkboxes label:hover{
+
+#checkboxes label:hover {
     background-color: red;
 }
 
-@media screen and (max-width: 925px){
+@media screen and (max-width: 925px) {
     .cadastro-serie {
         display: block;
     }
-    .form-register{
+
+    .form-register {
         padding: 2rem;
     }
+
     .img-logo {
-        padding: 1rem 8rem;
-        width: 80%;
+        padding: 1rem 30%;
         margin: 0 auto;
     }
-    .img-logo label{
+
+    .img-logo label {
         margin-top: 1rem;
         display: block;
     }
-  
+
     .img-logo img {
         display: block;
         border-radius: 3%;
         margin: 0 auto;
         border: 1px solid black;
-    
-    
+
+
     }
-    .form-grid{
+
+    .form-grid {
         display: block;
     }
+
     .form-grid div:nth-child(2) {
         margin: 0;
-    
+
     }
-    .form-botoes{
+
+    .form-botoes {
         display: block;
     }
-    button{
+
+    button {
         width: 100%;
     }
-    button:nth-child(2){
+
+    button:nth-child(2) {
         margin-left: 0;
     }
 }
 
 @media screen and (max-width: 500px) {
     .img-logo {
-        padding: 1rem 4rem;
-        width: 100%;
+        padding: 1rem 20%;
         margin: 0 auto;
     }
 }
