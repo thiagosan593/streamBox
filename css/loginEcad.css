@@ -126,7 +126,7 @@ input:focus {
 .not-conter{
     margin-top: 10%;
 }
-#errorMsg{
+#Msg{
     color: red;
 }
 @media screen and (max-width: 900px) {

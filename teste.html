@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+
+<body>
+
+        <img src="" alt="" id="preview-image">
+        <input type="file" id="image" name="image">
+      
+
+
+
+    <script>
+        const input = document.querySelector('#image');
+
+        input.addEventListener('change', function (e) {
+            e.preventDefault
+            const tgt = e.target || window.event.srcElement;
+
+            const files = tgt.files;
+
+            const fr = new FileReader();
+
+            fr.onload = function () {
+                document.querySelector('#preview-image').src = fr.result;
+            }
+
+            fr.readAsDataURL(files[0]);
+
+        });
+    </script>
+</body>
+
+</html>

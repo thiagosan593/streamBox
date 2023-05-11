@@ -22,7 +22,7 @@
 
    
     <!--Script-->
-    <script src="Js/Script.js"></script>
+    <script src="Js/Script.js" defer ></script>
 
 </head>
 
@@ -48,13 +48,16 @@
 
 
     <section class="container ">
+        <p id="errorMsg" class="error-message"></p>
         <h1>Cadastro </h1>
-        <form action="">
+        <form action="" id="cadserie">
             <div class="cadastro-serie">
                 <div class="img-logo">
-                    <img src="imagens/IMFG.png" alt="" srcset="">
-                    <label for="capa">Capa:</label>
-                    <input id="capa" type="file" name="arquivos" />
+                   
+                    <img src="imagens/IMFG.png" alt="" id="preview-image">
+                    <label for="image">Capa:</label>
+                    <input type="file" id="image" name="image">
+        
 
                 </div>
                 <div class="form-register">
@@ -99,7 +102,7 @@
                     <textarea name="" id="" rows="10" placeholder="Descrição da Serie"></textarea>
 
                     <div class="form-botoes">
-                        <button type="submit" class="salvar">Cadastrar</button>
+                        <button type="submit" class="salvar" onclick="cadserie()" >Cadastrar</button>
                         <button type="submit" class="cancelar">Cancelar</button>
                     </div>
                 </div>
@@ -111,7 +114,25 @@
     <footer>
         <p>Equipe 05</p>
     </footer>
+    <script>
+        const input = document.querySelector('#image');
 
+        input.addEventListener('change', function (e) {
+            e.preventDefault
+            const tgt = e.target || window.event.srcElement;
+
+            const files = tgt.files;
+
+            const fr = new FileReader();
+
+            fr.onload = function () {
+                document.querySelector('#preview-image').src = fr.result;
+            }
+
+            fr.readAsDataURL(files[0]);
+
+        });
+    </script>
 </body>
 
 </html>

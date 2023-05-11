@@ -23,10 +23,9 @@ function atualizar() {
 function sobreedit() {
     location.href = "sobre-edit.html";
 }
-
-function sobre() {
+document.querySelector(".sobre").addEventListener('click', function(){
     location.href = "sobre.html";
-}
+})
 
 /*Menu de opções da serie */
 
@@ -49,26 +48,22 @@ function showCheckBoX() {
 }
 
 /**Voltar pagina 404 */
-
-function voltar() {
-
+function voltar(){
     location.href = "series.html";
-
 }
-
 
 /*Validação de Login*/
 const usuariosCadastrados = [
-    { nome:'João', email: 'joao@hotmail.com', senha: 'senha123', tipo: 'normal' },
-    { nome:'Maria',  email: 'maria@streambox.com', senha: 'senha123', tipo: 'admin' },
-    { nome:'Pedro', email: 'pedro@gmail.com', senha: 'senha123', tipo: 'normal' }
+    { nome: 'João', email: 'joao@hotmail.com', senha: 'senha123', tipo: 'normal' },
+    { nome: 'Maria', email: 'maria@streambox.com', senha: 'senha123', tipo: 'admin' },
+    { nome: 'Pedro', email: 'pedro@gmail.com', senha: 'senha123', tipo: 'normal' }
 ];
 
 const loginForm = document.getElementById('loginForm');
-const errorMsg = document.getElementById('errorMsg');
+const Msg = document.getElementById('Msg');
 
 loginForm.addEventListener('submit', function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
@@ -85,17 +80,36 @@ loginForm.addEventListener('submit', function (event) {
                 location.href = "series.html";
             }
         } else {
-            MensagemErro('Senha inválida.');
+            Mensagem('Senha inválida.');
         }
     } else {
-        MensagemErro('Email não encontrado.');
+        Mensagem('Email não encontrado.');
     }
 });
 
-function MensagemErro(mensagem) {
-    errorMsg.textContent = mensagem;
+function Mensagem(mensagem) {
+    Msg.textContent = mensagem;
 
-    setTimeout(function() {
-        errorMsg.textContent = '';
-    }, 5000);
+    setTimeout(function () {
+        Msg.textContent = '';
+    }, 8000);
 }
+
+
+// const input = document.querySelector('#image');
+
+// input.addEventListener('change', function (e) {
+//     e.preventDefault
+//     const tgt = e.target || window.event.srcElement;
+
+//     const files = tgt.files;
+
+//     const fr = new FileReader();
+
+//     fr.onload = function () {
+//         document.querySelector('#preview-image').src = fr.result;
+//     }
+
+//     fr.readAsDataURL(files[0]);
+
+// });
