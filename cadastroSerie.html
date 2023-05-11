@@ -22,6 +22,8 @@
 
     <!--Scrip do Menu-->
     <script src="Js/menu.js"></script>
+    <!--Scrip Opções-->
+    <script src="Js/opcoes.js"></script>
 
 </head>
 
@@ -50,13 +52,12 @@
         <form action="">
             <div class="cadastro-serie">
                 <div class="img-logo">
-                    <img src="imagens/The Last of Us.png" alt="" srcset="">
+                    <img src="imagens/IMFG.png" alt="" srcset="">
                     <label for="capa">Capa:</label>
                     <input id="capa" type="file" name="arquivos" />
 
                 </div>
                 <div class="form-register">
-                    <h1>Mr. Robot</h1>
                     <label for="">Título</label>
                     <input type="text">
                     <label for="">Pais de Origem:</label>
@@ -80,6 +81,20 @@
                     <input type="text">
 
                     <label for="">Disponivel em:</label>
+                    <div class="mutiselect">
+                        <div class="selectBox" onclick="showCheckBoX()">
+                            <select>
+                              <option>Selecione as opções</option>
+                            </select>
+                            <div class="overSelect"></div>
+                         </div>
+                         <div id="checkboxes">
+                            <label for="">Netflix<input type="checkbox"></label>
+                            <label for="">Prime Video<input type="checkbox"></label>
+                            <label for="">HBO<input type="checkbox"></label>
+                            <label for="">Globo Play<input type="checkbox"></label>
+                         </div>
+                    </div>
 
                     <label for="">Sobre</label>
                     <textarea name="" id="" rows="10"></textarea>

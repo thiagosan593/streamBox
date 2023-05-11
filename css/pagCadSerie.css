@@ -51,7 +51,7 @@
 
 }
 
-.form-register h1 {
+.form-register h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
 }
@@ -70,6 +70,7 @@
 textarea{
     border-radius: .4rem;
     width: 100%;
+    padding: .6rem;
 }
 .form-botoes{
     display: flex;
@@ -99,4 +100,99 @@ button:nth-child(2){
 }
 button:hover{
     opacity: 1;
+}
+
+.mutiselect{
+    width: 100%;
+}
+.selectBox{
+    position: relative;
+}
+
+.selectBox select{
+    width: 100%;
+    font-weight: bolder;
+    padding: .6rem;
+    border-radius: .5rem;
+    border: 1px solid #000;
+}
+.selectBox select option{
+    display: none;
+}
+.overSelect{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+#checkboxes{
+    display: none; 
+    border: 1px solid #000;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+#checkboxes label{
+    padding: .3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    justify-content: space-between;
+    
+}
+#checkboxes label:hover{
+    background-color: red;
+}
+
+@media screen and (max-width: 925px){
+    .cadastro-serie {
+        display: block;
+    }
+    .form-register{
+        padding: 2rem;
+    }
+    .img-logo {
+        padding: 1rem 8rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .img-logo label{
+        margin-top: 1rem;
+        display: block;
+    }
+  
+    .img-logo img {
+        display: block;
+        border-radius: 3%;
+        margin: 0 auto;
+        border: 1px solid black;
+    
+    
+    }
+    .form-grid{
+        display: block;
+    }
+    .form-grid div:nth-child(2) {
+        margin: 0;
+    
+    }
+    .form-botoes{
+        display: block;
+    }
+    button{
+        width: 100%;
+    }
+    button:nth-child(2){
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .img-logo {
+        padding: 1rem 4rem;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
