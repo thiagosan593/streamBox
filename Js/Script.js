@@ -23,9 +23,10 @@ function atualizar() {
 function sobreedit() {
     location.href = "sobre-edit.html";
 }
-document.querySelector(".sobre").addEventListener('click', function(){
+
+function sobre() {
     location.href = "sobre.html";
-})
+}
 
 /*Menu de opções da serie */
 
@@ -48,9 +49,13 @@ function showCheckBoX() {
 }
 
 /**Voltar pagina 404 */
-function voltar(){
+
+function voltar() {
+
     location.href = "series.html";
+
 }
+
 
 /*Validação de Login*/
 const usuariosCadastrados = [
@@ -60,7 +65,7 @@ const usuariosCadastrados = [
 ];
 
 const loginForm = document.getElementById('loginForm');
-const Msg = document.getElementById('Msg');
+const errorMsg = document.getElementById('Msg');
 
 loginForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -96,6 +101,8 @@ function Mensagem(mensagem) {
 }
 
 
+/* */
+
 // const input = document.querySelector('#image');
 
 // input.addEventListener('change', function (e) {
@@ -111,5 +118,4 @@ function Mensagem(mensagem) {
 //     }
 
 //     fr.readAsDataURL(files[0]);
-
-// });
+// }
