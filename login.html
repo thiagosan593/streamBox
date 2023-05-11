@@ -15,7 +15,7 @@
 
  
     <!--Script-->
-    <script src="Js/Script.js"></script>
+    <script src="Js/Script.js" defer></script>
 
 </head>
 
@@ -27,16 +27,16 @@
         </div>
         <div class="form-login">
             <h2>LOGIN</h2>
-            <form>
+            <form id="loginForm">
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email">
+                <input required type="text" id="email" name="email">
 
-                <label for="Senha">Senha:</label>
-                <input type="password" id="Senha" name="Senha">
-
+                <label for="senha">Senha:</label>
+                <input  required type="password" id="senha" name="senha">
                 <p><a href="">Esqueceu sua senha?</a></p>
-                <input type="submit" onclick="login(); return false" value="ENTRAR">
+                <input type="submit"; return false" value="ENTRAR">
             </form>
+            <p id="errorMsg" class="error-message"></p>
             <p class="not-conter">Não tem conta? <a href="cadastro.html">CADASTRE-SE</a></p>
         </div>
 

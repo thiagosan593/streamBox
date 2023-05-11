@@ -283,7 +283,6 @@ footer {
 .edit-botoes  .btn-atualizar:hover, .edit-botoes .btn-del:hover{
     opacity: 1;
 }
-
 @media screen and (min-width: 800px) {
     span#burger {
         display: none;

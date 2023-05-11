@@ -1,45 +1,30 @@
-/*Login */
-function login() {
-
-    let email = document.querySelector("#email").value;
-    let senha = document.querySelector("#Senha").value;
-
-    if (email == "admin" && senha == "admin") {
-        location.href = "paineladmin.html";
-    }else if(email == "user" && senha == "user"){
-        location.href = "series.html";
-    } else {
-        alert("usuário ou senha inválida")
-
-    }
-}
 
 /*Menu hamburger */
-function width(){
-    if(window.innerWidth >=800){
-        itens.style.display ='block'
-    }else{
-        itens.style.display='none'
+function width() {
+    if (window.innerWidth >= 800) {
+        itens.style.display = 'block'
+    } else {
+        itens.style.display = 'none'
     }
 }
-function clickMenu(){
-  if(  itens.style.display =='block'){
-    itens.style.display ='none'
-  }else{
-    itens.style.display ='block'
-  }
+function clickMenu() {
+    if (itens.style.display == 'block') {
+        itens.style.display = 'none'
+    } else {
+        itens.style.display = 'block'
+    }
 }
 
 /**Opções card*/
-function atualizar(){
+function atualizar() {
     location.href = "atualizar.html";
 }
 
-function sobreedit(){
+function sobreedit() {
     location.href = "sobre-edit.html";
 }
 
-function sobre(){
+function sobre() {
     location.href = "sobre.html";
 }
 
@@ -72,3 +57,45 @@ function voltar() {
 }
 
 
+/*Validação de Login*/
+const usuariosCadastrados = [
+    { nome:'João', email: 'joao@hotmail.com', senha: 'senha123', tipo: 'normal' },
+    { nome:'Maria',  email: 'maria@streambox.com', senha: 'senha123', tipo: 'admin' },
+    { nome:'Pedro', email: 'pedro@gmail.com', senha: 'senha123', tipo: 'normal' }
+];
+
+const loginForm = document.getElementById('loginForm');
+const errorMsg = document.getElementById('errorMsg');
+
+loginForm.addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    const usuarioEncontrado = usuariosCadastrados.find(function (usuario) {
+        return usuario.email === email;
+    });
+
+    if (usuarioEncontrado) {
+        if (usuarioEncontrado.senha === senha) {
+            if (usuarioEncontrado.tipo === 'admin') {
+                location.href = "paineladmin.html";
+            } else {
+                location.href = "series.html";
+            }
+        } else {
+            MensagemErro('Senha inválida.');
+        }
+    } else {
+        MensagemErro('Email não encontrado.');
+    }
+});
+
+function MensagemErro(mensagem) {
+    errorMsg.textContent = mensagem;
+
+    setTimeout(function() {
+        errorMsg.textContent = '';
+    }, 5000);
+}
