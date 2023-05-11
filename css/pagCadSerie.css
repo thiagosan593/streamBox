@@ -1,0 +1,102 @@
+.cadastro-serie {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0 auto;
+}
+
+.img-logo {
+    padding: 1rem 5rem;
+}
+
+.img-logo img {
+    border-radius: 3%;
+    width: 100%;
+    max-height: 400px;
+    border: 1px solid black;
+
+
+}
+
+.img-logo label {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.img-logo input[type=file] {
+    background-color: #f7f4f4;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.form-register {
+    box-sizing: border-box;
+    padding: 1rem 6rem;
+    display: block;
+
+}
+
+.form-register label {
+    display: block;
+    margin: .4rem 0;
+    font-size: 1.1rem;
+    font-weight: bolder;
+
+}
+
+.form-register input {
+    width: 100%;
+    border-radius: .4rem;
+    padding: .4rem;
+    border: 1px solid rgb(48, 45, 45);
+
+}
+
+.form-register h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-grid {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.form-grid div:nth-child(2) {
+    margin: 0 1rem;
+
+}
+textarea{
+    border-radius: .4rem;
+    width: 100%;
+}
+.form-botoes{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    margin-top: 1rem;
+   width: 90%;
+   border-radius: .6rem;
+   border: none;
+   padding: .4rem;
+   opacity: .8;
+   cursor: pointer;
+}
+button:nth-child(2){
+    margin-left: 1rem;
+}
+.salvar{
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+}
+.cancelar{
+    background-color: #000;
+    color: white;
+    font-size: 1.2rem;
+}
+button:hover{
+    opacity: 1;
+}

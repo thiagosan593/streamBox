@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séries</title>
+    <!--Icon-->
+    <link rel="shortcut icon" href="imagens/icone.ico" type="image/x-icon">
+    <!--Fonte Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <!--Css-->
+    <link rel="stylesheet" href="css/estilogeral.css">
+    <link rel="stylesheet" href="css/pagCadSerie.css">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!--Scrip do Menu-->
+    <script src="Js/menu.js"></script>
+
+</head>
+
+<body onresize="width()">
+
+    <header class="navegacao">
+        <div class="logo">
+            <a href="index.html"><img src="imagens/logo.png" alt="" srcset=""></a>
+            <a href="login.html"><i data-tooltip="Sair" class="bi bi-box-arrow-in-right"></i></a>
+        </div>
+        <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+        </span>
+        <menu id="itens">
+            <ul>
+                <li><a href="paineladmin.html">Séries</a></li>
+                <li><a class="active" href="cadastroSerie.html">Cadastrar</a></li>
+
+            </ul>
+        </menu>
+
+    </header>
+
+
+    <section class="container ">
+        <form action="">
+            <div class="cadastro-serie">
+                <div class="img-logo">
+                    <img src="imagens/The Last of Us.png" alt="" srcset="">
+                    <label for="capa">Capa:</label>
+                    <input id="capa" type="file" name="arquivos" />
+
+                </div>
+                <div class="form-register">
+                    <h1>Mr. Robot</h1>
+                    <label for="">Título</label>
+                    <input type="text">
+                    <label for="">Pais de Origem:</label>
+                    <input type="text">
+                    <div class="form-grid">
+                        <div>
+                            <label for="">Temporadas:</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="">Nº de Ep:</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="">Lançamento:</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <label for="">Status:</label>
+                    <input type="text">
+
+                    <label for="">Disponivel em:</label>
+
+                    <label for="">Sobre</label>
+                    <textarea name="" id="" rows="10"></textarea>
+
+                    <div class="form-botoes">
+                        <button type="submit" class="salvar">Cadastrar</button>
+                        <button type="submit" class="cancelar">Cancelar</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Equipe 05</p>
+    </footer>
+
+</body>
+
+</html>
