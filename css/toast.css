@@ -8,8 +8,6 @@
 }
 
 body{
-    height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f2f2f2;
@@ -59,7 +57,7 @@ body{
 
 .message .text{
     font-size: 20px;
-    font-weight: 400;;
+    font-weight: 400;
     color: #666666;
 }
 
@@ -110,22 +108,10 @@ body{
     }
 }
 
-button{
-    padding: 12px 20px;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    background-color: #4070f4;
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover{
-    background-color: #0e4bf1;
-}
 
 .toast.active ~ button{
     pointer-events: none;
+}
+@media screen and (max-width: 600px)  {
+    
 }

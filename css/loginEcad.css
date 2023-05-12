@@ -126,6 +126,10 @@ input:focus {
 .not-conter{
     margin-top: 10%;
 }
+.not-conter a,.reset-password{
+    font-family: 'mogra',Arial, Helvetica, sans-serif;
+
+}
 .sucesso{
   color: green;
 }
