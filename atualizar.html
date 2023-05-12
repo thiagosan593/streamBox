@@ -52,9 +52,9 @@
         <form action="">
             <div class="cadastro-serie">
                 <div class="img-logo">
-                    <img src="imagens/910ZuOiYiRL._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
-                    <label for="capa">Capa:</label>
-                    <input id="capa" type="file" name="arquivos" />
+                    <img src="imagens/910ZuOiYiRL._AC_UF894,1000_QL80_.jpg" alt="" id="preview-image">
+                    <label for="image">Capa:</label>
+                    <input type="file" id="image" name="image">
 
                 </div>
                 <div class="form-register">
@@ -112,6 +112,25 @@
     <footer>
         <p>Equipe 05</p>
     </footer>
+    <script>
+        const input = document.querySelector('#image');
+
+        input.addEventListener('change', function (e) {
+            e.preventDefault()
+            const tgt = e.target || window.event.srcElement;
+
+            const files = tgt.files;
+
+            const fr = new FileReader();
+
+            fr.onload = function () {
+                document.querySelector('#preview-image').src = fr.result;
+            }
+
+            fr.readAsDataURL(files[0]);
+
+        });
+    </script>
 
 </body>
 

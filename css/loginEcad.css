@@ -126,7 +126,10 @@ input:focus {
 .not-conter{
     margin-top: 10%;
 }
-#Msg{
+.sucesso{
+  color: green;
+}
+.error{
     color: red;
 }
 @media screen and (max-width: 900px) {
@@ -144,10 +147,7 @@ input:focus {
         display: block;
         border-radius: 1rem;
     }
-    .form-login{
-      border: none;
-    }
-
+   
     .login-logo {
         display: block;
         padding: 1rem;
@@ -166,6 +166,7 @@ input:focus {
     .form-login {
         border-radius: 0;
         margin: 0;
+        border: none;
         width: 100%;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;

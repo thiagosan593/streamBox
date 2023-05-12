@@ -1,4 +1,10 @@
 
+toast = document.querySelector(".toast");
+closeIcon = document.querySelector(".close");
+progress = document.querySelector(".progress");
+
+let timer1, timer2;
+
 /*Menu hamburger */
 function width() {
     if (window.innerWidth >= 800) {
@@ -69,9 +75,19 @@ const errorMsg = document.getElementById('Msg');
 
 loginForm.addEventListener('submit', function (event) {
     event.preventDefault();
-
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
+
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+    }, 5000); 
+
+    timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+    }, 5300);
 
     const usuarioEncontrado = usuariosCadastrados.find(function (usuario) {
         return usuario.email === email;
@@ -80,24 +96,26 @@ loginForm.addEventListener('submit', function (event) {
     if (usuarioEncontrado) {
         if (usuarioEncontrado.senha === senha) {
             if (usuarioEncontrado.tipo === 'admin') {
+                Msg.classList.remove("error")
+                Msg.classList.add("sucesso")
+                Mensagem('Login com sucesso.');
                 location.href = "paineladmin.html";
             } else {
                 location.href = "series.html";
             }
         } else {
+            Msg.classList.add("error")
             Mensagem('Senha inválida.');
         }
     } else {
-        Mensagem('Email não encontrado.');
+        Msg.classList.add("error")
+        Mensagem('Email não cadastrado.');
+
     }
 });
 
 function Mensagem(mensagem) {
     Msg.textContent = mensagem;
-
-    setTimeout(function () {
-        Msg.textContent = '';
-    }, 8000);
 }
 
 
@@ -119,3 +137,5 @@ function Mensagem(mensagem) {
 
 //     fr.readAsDataURL(files[0]);
 // }
+
+
