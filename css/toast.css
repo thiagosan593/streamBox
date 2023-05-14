@@ -112,6 +112,21 @@ body{
 .toast.active ~ button{
     pointer-events: none;
 }
+@media screen and (max-width: 800px)  {
+    .toast{
+        top: 10rem;
+        right: 30px;
+        width: 300px;
+        font-size: 1rem;
+    }
+    .message .text{
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 600px)  {
-    
+    .toast{
+        top: 6.4rem;
+        width: 270px;
+    }
 }

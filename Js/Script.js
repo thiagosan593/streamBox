@@ -101,6 +101,9 @@ loginForm.addEventListener('submit', function (event) {
                 Mensagem('Login com sucesso.');
                 location.href = "paineladmin.html";
             } else {
+                Msg.classList.remove("error")
+                Msg.classList.add("sucesso")
+                Mensagem('Login com sucesso.');
                 location.href = "series.html";
             }
         } else {
