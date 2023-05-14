@@ -1,4 +1,4 @@
-.container h1{
+.container h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -115,15 +115,18 @@ button:hover {
     opacity: 1;
 }
 
-.mutiselect {
+.mutiselect,
+.mutiselectS {
     width: 100%;
 }
 
-.selectBox {
+.selectBox,
+.selectBoxS {
     position: relative;
 }
 
-.selectBox select {
+.selectBox select,
+.selectBoxS select {
     width: 100%;
     font-weight: bolder;
     padding: .6rem;
@@ -131,11 +134,13 @@ button:hover {
     border: 1px solid #000;
 }
 
-.selectBox select option {
+.selectBox select option,
+.selectBoxS select option {
     display: none;
 }
 
-.overSelect {
+.overSelect,
+.overSelectS {
     position: absolute;
     left: 0;
     top: 0;
@@ -143,7 +148,8 @@ button:hover {
     bottom: 0;
 }
 
-#checkboxes {
+#checkboxes,
+#checkboxesS  {
     display: none;
     border: 1px solid #000;
     border-bottom-left-radius: .6rem;
@@ -152,7 +158,7 @@ button:hover {
     background-color: white;
 }
 
-#checkboxes label {
+#checkboxes label, #checkboxesS label {
     padding: .3rem;
     width: 100%;
     display: grid;
@@ -161,7 +167,7 @@ button:hover {
 
 }
 
-#checkboxes label:hover {
+#checkboxes label:hover,#checkboxesS label:hover {
     background-color: red;
 }
 

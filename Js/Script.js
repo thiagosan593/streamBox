@@ -36,11 +36,27 @@ function sobre() {
 
 /*Menu de opções da serie */
 
-var expanded = false;
+let expandedS = false;
 
 function showCheckBoX() {
-    var checkbox = document.getElementById("checkboxes")
-    var select = document.querySelector(".selectBox select")
+    let checkbox = document.getElementById("checkboxesS")
+    let select = document.querySelector(".selectBoxS select")
+    if (!expandedS) {
+        checkbox.style.display = "block"
+        expandedS = true
+        select.style.borderBottomLeftRadius = "0";
+        select.style.borderBottomRightRadius = "0";
+    } else {
+        checkbox.style.display = "none"
+        expandedS = false
+        select.style.borderBottomLeftRadius = ".5rem";
+        select.style.borderBottomRightRadius = ".5rem";
+    }
+}
+let expanded = false;
+function showCheckBoX2() {
+    let checkbox = document.getElementById("checkboxes")
+    let select = document.querySelector(".selectBox select")
     if (!expanded) {
         checkbox.style.display = "block"
         expanded = true
@@ -53,6 +69,7 @@ function showCheckBoX() {
         select.style.borderBottomRightRadius = ".5rem";
     }
 }
+
 
 /**Voltar pagina 404 */
 

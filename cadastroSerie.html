@@ -81,10 +81,22 @@
                     </div>
 
                     <label for="status">Status:</label>
-                    <input id="status" type="text">
+                    <div class="mutiselectS">
+                        <div class="selectBoxS" onclick="showCheckBoX()">
+                            <select>
+                              <option>Selecione as opções</option>
+                            </select>
+                            <div class="overSelectS"></div>
+                         </div>
+                         <div id="checkboxesS">
+                            <label for="">Cancelada<input type="checkbox"></label>
+                            <label for="">Finalizada<input type="checkbox"></label>
+                            <label for="">Em Produção<input type="checkbox"></label>
+                         </div>
+                    </div>
                     <label for="">Disponivel em:</label>
                     <div class="mutiselect">
-                        <div class="selectBox" onclick="showCheckBoX()">
+                        <div class="selectBox" onclick="showCheckBoX2()">
                             <select>
                               <option>Selecione as opções</option>
                             </select>
