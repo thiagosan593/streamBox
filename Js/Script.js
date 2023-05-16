@@ -103,21 +103,25 @@ loginForm.addEventListener('submit', function (event) {
     if (usuarioEncontrado) {
         if (usuarioEncontrado.senha === senha) {
             if (usuarioEncontrado.tipo === 'admin') {
+                toast.style.display = 'block';
                 Msg.classList.remove("error")
                 Msg.classList.add("sucesso")
                 Mensagem('Login com sucesso.');
                 location.href = "paineladmin.html";
             } else {
+                toast.style.display = 'block';
                 Msg.classList.remove("error")
                 Msg.classList.add("sucesso")
                 Mensagem('Login com sucesso.');
                 location.href = "series.html";
             }
         } else {
+            toast.style.display = 'block';
             Msg.classList.add("error")
             Mensagem('Senha inválida.');
         }
     } else {
+        toast.style.display = 'block';
         Msg.classList.add("error")
         Mensagem('Email não cadastrado.');
 
@@ -128,12 +132,13 @@ function confirmarExclusao() {
     let confirmacao = confirm("Tem certeza que deseja excluir este item?");
 
 
-
     if (confirmacao) {
+        toast.style.display = 'block';
         Msg.classList.remove("error")
         Msg.classList.add("sucesso")
         Mensagem("Item excluído com sucesso!");
     } else {
+        toast.style.display = 'block';
         Msg.classList.add("error")
        Mensagem("Exclusão cancelada.");
     }
@@ -145,9 +150,11 @@ function Mensagem(mensagem) {
 
     timer1 = setTimeout(() => {
         toast.classList.remove("active");
+        toast.style.display = 'none';
     }, 5000);
 
     timer2 = setTimeout(() => {
+        toast.style.display = 'none';
         progress.classList.remove("active");
     }, 5300);
     Msg.textContent = mensagem;
