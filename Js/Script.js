@@ -95,16 +95,6 @@ loginForm.addEventListener('submit', function (event) {
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
-    toast.classList.add("active");
-    progress.classList.add("active");
-
-    timer1 = setTimeout(() => {
-        toast.classList.remove("active");
-    }, 5000); 
-
-    timer2 = setTimeout(() => {
-        progress.classList.remove("active");
-    }, 5300);
 
     const usuarioEncontrado = usuariosCadastrados.find(function (usuario) {
         return usuario.email === email;
@@ -134,7 +124,32 @@ loginForm.addEventListener('submit', function (event) {
     }
 });
 
+function confirmarExclusao() {
+    let confirmacao = confirm("Tem certeza que deseja excluir este item?");
+
+
+
+    if (confirmacao) {
+        Msg.classList.remove("error")
+        Msg.classList.add("sucesso")
+        Mensagem("Item excluído com sucesso!");
+    } else {
+        Msg.classList.add("error")
+       Mensagem("Exclusão cancelada.");
+    }
+}
+
 function Mensagem(mensagem) {
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+    }, 5000);
+
+    timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+    }, 5300);
     Msg.textContent = mensagem;
 }
 
