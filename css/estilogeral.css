@@ -283,6 +283,13 @@ footer {
 .edit-botoes  .btn-atualizar:hover, .edit-botoes .btn-del:hover{
     opacity: 1;
 }
+
+.sucesso{
+    color: green;
+  }
+  .error{
+      color: red;
+  }
 @media screen and (min-width: 800px) {
     span#burger {
         display: none;
